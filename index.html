@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      background-color: #f3f4f6;
+    }
+
+    .dashBoard {
+      display: flex;
+      width: 100%;
+    }
+
+    .nav-bar {
+      background-color: #1e90ff;
+      width: 240px;
+      color: white;
+      padding: 20px;
+    }
+
+    .nav-bar h1 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .nav-bar a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .nav-gap {
+      margin-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 15px;
+    }
+
+    .Body {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .header-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header-info input {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 250px;
+    }
+
+    .header-info span {
+      cursor: pointer;
+    }
+
+    .header-info2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      gap: 20px;
+    }
+
+    .header-info2 h3, .header-info2 p {
+      margin: 0;
+    }
+
+    .header-info2 button {
+      padding: 8px 16px;
+      background-color: #1e90ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .Main {
+      display: flex;
+      gap: 20px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      flex: 2;
+    }
+
+    .project-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card-icons {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .Side-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .announcements, .trending {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .announcement-item {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .trending-item {
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashBoard">
+    <div class="nav-bar">
+      <h1><span class="material-symbols-outlined">dashboard</span>Dashboard</h1>
+      <nav>
+        <a href="#"><span class="material-symbols-outlined">home</span>Home</a>
+        <a href="#"><span class="material-symbols-outlined">account_circle</span>Profile</a>
+        <a href="#"><span class="material-symbols-outlined">mark_as_unread</span>Messages</a>
+        <a href="#"><span class="material-symbols-outlined">history</span>History</a>
+        <a href="#"><span class="material-symbols-outlined">assignment</span>Tasks</a>
+        <a href="#"><span class="material-symbols-outlined">diversity_3</span>Communities</a>
+
+        <div class="nav-gap"></div>
+
+        <a href="#"><span class="material-symbols-outlined">settings</span>Settings</a>
+        <a href="#"><span class="material-symbols-outlined">help</span>Support</a>
+        <a href="#"><span class="material-symbols-outlined">verified_user</span>Privacy</a>
+      </nav>
+    </div>
+
+    <div class="Body">
+      <div class="header">
+        <div class="header-info">
+          <span class="material-symbols-outlined">search</span>
+          <input type="text" placeholder="Search..." />
+        </div>
+        <div class="header-info">
+          <span class="material-symbols-outlined">notifications</span>
+          <span class="material-symbols-outlined">flutter_dash</span>
+        </div>
+      </div>
+
+      <div class="header-info2">
+        <div>
+          <p>Hi there,</p>
+          <h3>Morgan Oakley (@morgan)</h3>
+        </div>
+        <div>
+          <button>New</button>
+          <button>Upload</button>
+          <button>Share</button>
+        </div>
+      </div>
+
+      <div class="Main">
+        <div class="projects">
+          <div class="project-card">
+            <h3>Super Cool Project</h3>
+            <p>Sed tempus ut lacus ut scelerisque...</p>
+            <div class="card-icons">⭐ 👁 🔗</div>
+          </div>
+          <div class="project-card">
+            <h3>Less Cool Project</h3>
+            <p>Nullam condimentum ipsum at lectus...</p>
+            <div class="card-icons">⭐ 👁 🔗</div>
+          </div>
+          <div class="project-card">
+            <h3>Impossible App</h3>
+            <p>In hac habitasse platea dictumst...</p>
+            <div class="card-icons">⭐ 👁 🔗</div>
+          </div>
+          <div class="project-card">
+            <h3>Easy Peasy App</h3>
+            <p>Etiam cursus eros ac efficitur...</p>
+            <div class="card-icons">⭐ 👁 🔗</div>
+          </div>
+          <div class="project-card">
+            <h3>Ad Blocker</h3>
+            <p>Quisque eget rutrum nisl...</p>
+            <div class="card-icons">⭐ 👁 🔗</div>
+          </div>
+          <div class="project-card">
+            <h3>Money Maker</h3>
+            <p>Praesent convallis libero quis...</p>
+            <div class="card-icons">⭐ 👁 🔗</div>
+          </div>
+        </div>
+
+        <div class="Side-container">
+          <div class="announcements">
+            <h3>Announcements</h3>
+            <div class="announcement-item"><strong>Site Maintenance</strong><br> Vestibulum tincidunt tellus lacus...</div>
+            <div class="announcement-item"><strong>Community Share Day</strong><br> Nam vel lectus tincidunt...</div>
+            <div class="announcement-item"><strong>Updated Privacy Policy</strong><br> Phasellus efficitur nisi eget...</div>
+          </div>
+          <div class="trending">
+            <h3>Trending</h3>
+            <div class="trending-item">@tegan - <span>World Peace Builder</span></div>
+            <div class="trending-item">@morgan - <span>Super Cool Project</span></div>
+            <div class="trending-item">@kendall - <span>Life Changing App</span></div>
+            <div class="trending-item">@alex - <span>No Traffic Maker</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
