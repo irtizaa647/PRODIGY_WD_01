@@ -70,7 +70,7 @@
 
 @media (max-width: 500px) {
     .nav-menu{
-         display: grid;
+      display: grid;
       grid-template-columns: repeat(3,1fr);
       align-items: center;
       gap: 0;
